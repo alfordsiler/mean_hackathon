@@ -1,4 +1,4 @@
-angular.module('VerdictApp', ['ui.router'])
+angular.module('VerdictApp', ['ui.router', 'rzModule'])
 .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
   $urlRouterProvider.otherwise('/');
 
@@ -15,11 +15,11 @@ angular.module('VerdictApp', ['ui.router'])
   .state('randomNum', {
     url: '/randomNum',
     templateUrl: 'app/views/randomNum.html',
-    // controller: 'RandomNumCtrl'
+    controller: 'RandomNumCtrl'
   })
   .state('8ball', {
     url: '/8ball',
-    templateUrl: 'app/views/8ball.html',
+    templateUrl: 'app/views/8ball.html'
     // controller: '8ballCtrl'
   })
   // .state('coinFlip', {
@@ -27,11 +27,11 @@ angular.module('VerdictApp', ['ui.router'])
   //   templateUrl: 'app/views/coinFlip.html',
     // controller: 'CoinFlipCtrl'
   // })
-  // .state('wheel', {
-  //   url: '/wheel',
-  //   templateUrl: 'app/views/wheel.html',
-    // controller: 'WheelCtrl'
-  // })
+  .state('wheel', {
+    url: '/wheel',
+    templateUrl: 'app/views/wheel.html',
+    controller: 'WheelCtrl'
+  })
 
   $locationProvider.html5Mode(true);
 }]);

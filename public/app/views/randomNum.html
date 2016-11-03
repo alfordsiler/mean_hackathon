@@ -1,4 +1,42 @@
-<h2>Random Number Generator</h2>
+<style>
+.randomNum {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}
+.sliderDiv {
+  width: 80%;
+  text-align: center;
+}
+.genNumButton{
+  font-size: 18px;
+  border-radius: 5px;
+  background-color: #42aaf4;
+  color: white;
+}
+.minMax{
+  width: 60px;
+  font-size: 20px;
+}
+</style>
 
-<p>Need help choosing a number? Just select your number range using the slider and then click "Give me a number."</p>
 
+<div class="randomNum">
+  <h2>Random Number Generator</h2>
+
+  <p>Need help choosing a number? Just select your number range using the slider and then click "Generate Random Number."</p>
+    <form ng-sumbit="getNumber()">
+      <div>Min:<input class="minMax" type="number" ng-model="slider.minValue"></div>
+      <div>Max:<input class="minMax" type="number" ng-model="slider.maxValue"></div>
+      <rzslider rz-slider-model="slider.minValue"
+                rz-slider-high="slider.maxValue"
+                rz-slider-options="slider.options"></rzslider>
+      <br>
+      <br>
+      <button ng-click="getNumber()" class="genNumButton" type="button">Generate Random Number</button>
+    </form>
+
+    <h2>Your Random Number</h2>
+    <div style="font-size: 50px">{{number}}</div>
+
+</div>
