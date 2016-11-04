@@ -30,7 +30,6 @@ angular.module('VerdictApp', ['ui.router', 'rzModule'])
   .state('wheel', {
     url: '/wheel',
     templateUrl: 'app/views/wheel.html',
-    controller: 'WheelCtrl'
   })
 
   $locationProvider.html5Mode(true);

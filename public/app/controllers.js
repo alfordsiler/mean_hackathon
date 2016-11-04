@@ -21,14 +21,4 @@ angular.module('VerdictApp')
     $scope.number = $scope.randomNumber($scope.slider.minValue, $scope.slider.maxValue);
   }
 
-}])
-
-.controller('WheelCtrl', ['$scope', function($scope){
-  console.log("in WheelCtrl");
-  
-  $scope.options = {
-
-  }
-
-
 }]);

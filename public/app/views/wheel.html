@@ -115,7 +115,7 @@ td.pw3
             </div>
         </td>
         <td width="438" height="582" class="the_wheel" align="center" valign="center">
-            <canvas id="zebra" width="434" height="434">
+            <canvas id="canvas" width="434" height="434">
                 <p style="{color: white}" align="center">Sorry, your browser doesn't support canvas. Please try another.</p>
             </canvas>
         </td>
@@ -156,7 +156,7 @@ td.pw3
     function createWinWheel(segments) {
         // Create new wheel object specifying the parameters at creation time.
         theWheel = new Winwheel({
-            'canvasId'     : 'zebra',
+            'canvasId'     : 'canvas',
             'numSegments'  : 6,       // Specify number of segments.
             'outerRadius'  : 205,     // Set outer radius so wheel fits inside the background.
             'textFontSize' : 20,      // Set font size as desired.
